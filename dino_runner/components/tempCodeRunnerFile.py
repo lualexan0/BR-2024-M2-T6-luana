@@ -86,12 +86,12 @@ class Game:
 
         if self.death_count == 0:
             font = pygame.font.Font(FONT_STYLE, 22)
-            text = font.render("RUN DINO! RUN", True, (255, 0, 0))
+            text = font.render("Press any key to start", True, (0, 0, 0))
             text_rect = text.get_rect()
             text_rect.center = (half_screen_width, half_screen_height)
             self.screen.blit(text, text_rect)
         else:
-            self.screen.blit(ICON, (half_screen_width - 30, half_screen_height - 120))
+            self.screen.blit(ICON, (half_screen_width - 20, half_screen_height - 40))
 
             # Display "Press any key to restart"
             font = pygame.font.Font(FONT_STYLE, 22)
