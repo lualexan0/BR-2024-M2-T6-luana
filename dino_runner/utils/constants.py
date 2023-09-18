@@ -2,18 +2,19 @@ import pygame
 import os
 
 # Global Constants
-TITLE = "Joguinho do Dinossauro"
-SCREEN_HEIGHT = 600
+TITLE = "Forest Dinossauro"
+SCREEN_HEIGHT = 1400
 SCREEN_WIDTH = 1100
 FPS = 30
 IMG_DIR = os.path.join(os.path.dirname(__file__), "..", "assets")
+
 
 # Assets Constants
 ICON = pygame.image.load(os.path.join(IMG_DIR, "DinoWallpaper.png"))
 
 RUNNING = [
-    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRun1.png")),
-    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRun2.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/dinorunner01.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/dinorunner2.png")),
 ]
 
 RUNNING_SHIELD = [
@@ -31,8 +32,8 @@ JUMPING_SHIELD = pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoJumpShield.pn
 JUMPING_HAMMER = pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoJumpHammer.png"))
 
 DUCKING = [
-    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoDuck1.png")),
-    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoDuck2.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/dinoba.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/dinobo.png")),
 ]
 
 DUCKING_SHIELD = [
@@ -46,14 +47,14 @@ DUCKING_HAMMER = [
 ]
 
 SMALL_CACTUS = [
-    pygame.image.load(os.path.join(IMG_DIR, "Cactus/SmallCactus1.png")),
-    pygame.image.load(os.path.join(IMG_DIR, "Cactus/SmallCactus2.png")),
-    pygame.image.load(os.path.join(IMG_DIR, "Cactus/SmallCactus3.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Cactus/l1.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Cactus/l2.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Cactus/l3.png")),
 ]
 LARGE_CACTUS = [
-    pygame.image.load(os.path.join(IMG_DIR, "Cactus/LargeCactus1.png")),
-    pygame.image.load(os.path.join(IMG_DIR, "Cactus/LargeCactus2.png")),
-    pygame.image.load(os.path.join(IMG_DIR, "Cactus/LargeCactus3.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Cactus/c1.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Cactus/c2.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Cactus/c3.png")),
 ]
 
 BIRD = [
@@ -65,8 +66,10 @@ CLOUD = pygame.image.load(os.path.join(IMG_DIR, 'Other/Cloud.png'))
 SHIELD = pygame.image.load(os.path.join(IMG_DIR, 'Other/shield.png'))
 HAMMER = pygame.image.load(os.path.join(IMG_DIR, 'Other/hammer.png'))
 
-BG = pygame.image.load(os.path.join(IMG_DIR, 'Other/Track.png'))
+BG = pygame.image.load(os.path.join(IMG_DIR, 'Other/fundo.png'))
 
 HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))
+
+#FUNDO = pygame.image.load(os.path.join(IMG_DIR, "Other/fundo.png"))
 
 DEFAULT_TYPE = "default"

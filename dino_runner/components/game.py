@@ -14,7 +14,7 @@ class Game:
         self.clock = pygame.time.Clock()
         self.running = False
         self.playing = False
-        self.game_speed = 20
+        self.game_speed = 10
         self.score = 0
         self.death_count = 0
         self.x_pos_bg = 0
@@ -56,7 +56,8 @@ class Game:
 
     def draw(self):
         self.clock.tick(FPS)
-        self.screen.fill((255, 255, 255))  # "#FFFFFF"
+        #self.screen.blit(FUNDO(0,0))
+        self.screen.fill((255, 255, 255))
         self.draw_background()
         self.player.draw(self.screen)
         self.obstacle_manager.draw(self.screen)
@@ -76,40 +77,42 @@ class Game:
         font = pygame.font.Font(FONT_STYLE, 22)
         text = font.render(f"Score: {self.score}", True, (0, 0, 0))
         text_rect = text.get_rect()
-        text_rect.center = (1000, 50)
+        text_rect.center = (111, 460)
         self.screen.blit(text, text_rect)
 
     def show_menu(self):
-        self.screen.fill((255, 255, 255))
-        half_screen_height = SCREEN_HEIGHT // 2
+        self.screen.fill((255, 255, 255)) # preemche a tela com cor
+        half_screen_height = SCREEN_HEIGHT // 2 # calculo do centro da tela, posicionar o texto e icon
         half_screen_width = SCREEN_WIDTH // 2
 
-        if self.death_count == 0:
-            font = pygame.font.Font(FONT_STYLE, 22)
-            text = font.render("RUN DINO! RUN", True, (255, 0, 0))
+        if self.death_count == 0: # aqui verifica se o dino ja morreu alguma vez no jogo
+            font = pygame.font.Font(FONT_STYLE, 22) # aqui e nossa fontezinha
+            text = font.render("RUN DINO! RUN", True, (255, 0, 0)) # coloquei em vermelho
             text_rect = text.get_rect()
             text_rect.center = (half_screen_width, half_screen_height)
             self.screen.blit(text, text_rect)
         else:
             self.screen.blit(ICON, (half_screen_width - 30, half_screen_height - 120))
+           #  se o dino morreu esse bloco, sera executado
 
-            # Display "Press any key to restart"
             font = pygame.font.Font(FONT_STYLE, 22)
             text = font.render("Press any key to restart", True, (0, 0, 0))
             text_rect = text.get_rect()
             text_rect.center = (half_screen_width, half_screen_height)
             self.screen.blit(text, text_rect)
 
-            # Display the accumulated death_count
+            
             font = pygame.font.Font(FONT_STYLE, 18)
+            # aqui vai mostrar o quanto vc é ruim de jogo, e morreu
             text = font.render(f"Total Deaths: {self.death_count}", True, (0, 0, 0))
             text_rect = text.get_rect()
             text_rect.center = (half_screen_width, half_screen_height + 40)
             self.screen.blit(text, text_rect)
 
-            # Display the score from the previous game session
+            
             text = font.render(f"Score: {self.score}", True, (0, 0, 0))
             text_rect = text.get_rect()
+            # aqui o texto fica no meio pra que a imagem do dino morto apareca em cima
             text_rect.center = (half_screen_width, half_screen_height + 80)
             self.screen.blit(text, text_rect)
 
