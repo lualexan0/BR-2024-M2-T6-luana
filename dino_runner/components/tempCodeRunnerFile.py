@@ -1,1 +1,0 @@
-text = font.render("RUN DINO! RUN", True, (255, 0, 0))
