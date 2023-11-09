@@ -1,0 +1,48 @@
+# Dino Runner - Jogo com Pygame
+
+Bem-vindo ao Dino Runner, um simples jogo desenvolvido em Python usando a biblioteca Pygame.
+Neste jogo, você controla um dinossauro que deve pular obstáculos e coletar power-ups.
+Este README fornecerá uma visão geral do projeto e instruções para executá-lo.
+
+
+## Visão Geral
+
+O Dino Runner é um projeto que demonstra o uso do Pygame para criar um jogo 2D simples. Ele apresenta os seguintes elementos:
+
+- Um dinossauro que você pode controlar.
+- Um plano de fundo em movimento.
+- Obstáculos que o dinossauro deve evitar.
+- Power-ups que podem ser coletados para obter vantagens.
+
+Os power-ups disponíveis são os seguintes:
+
+- **Power-up de Remoção de Obstáculos**: Ao coletar este power-up, ele remove todos os obstáculos do caminho, permitindo que o dinossauro corra sem preocupações.
+
+- **Power-up de Vida Infinita**: Este power-up concede ao dinossauro vida infinita, tornando-o invulnerável a colisões com obstáculos.
+
+## Pré-requisitos
+
+Certifique-se de ter a biblioteca Pygame instalada no seu ambiente Python. Você pode instalá-la usando o seguinte comando:
+
+
+## Como Executar
+
+Para jogar o Dino Runner, siga estas etapas:
+
+1. Clone ou faça o download deste repositório.
+2. Navegue até o diretório do projeto:
+3. Execute o arquivo `main.py`:
+4. Use as teclas de seta para cima para fazer o dinossauro pular e evitar obstáculos.
+5. Colete os power-ups para remover obstáculos ou obter vida infinita.
+6. Divirta-se jogando!
+
+## Créditos
+
+Este projeto foi desenvolvido como parte de um trabalho em grupo para aprender programação orientada a objetos em Python e o uso da biblioteca Pygame.
+Créditos aos colaboradores:
+
+- [Luana Alexandre ]
+- [Nivia Lopes ]
+
+
+Agradecemos por conferir o Dino Runner!
